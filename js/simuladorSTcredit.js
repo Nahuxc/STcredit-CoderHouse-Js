@@ -135,37 +135,3 @@ function menuOp2(marcador){
 function atras(){
     menuOp2(marcador);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* const saludar = () =>{
-    alert("bienvenido")
-}
-
-saludar(); */

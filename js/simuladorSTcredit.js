@@ -1,10 +1,26 @@
-////////////////////marcador de linea telefonica///////
+//////////////marcador de linea telefonica//////////////
 
 let marcador, plan, clienteN;
 
-let saldo = 0, pack1 = 200, pack2 = 500, pack3 = 1000;
+let saldo = 0/* , pack1 = 200, pack2 = 500, pack3 = 1000; */
 
 let gb = 0, gb10 = 10, gb20 = 20;
+
+let packSelect;
+
+//objetos
+
+class packStCredit{
+    constructor(nombre, pack1){
+        this.nombre = nombre;
+        this.pack1 = pack1;
+    }
+}
+
+const objPack1 = new packStCredit("medium", 200)
+const objPack2 = new packStCredit("hard", 500)
+const objPack3 = new packStCredit("extraHard", 1000)
+
 
 /////////////arrays//////////////////////
 
@@ -95,23 +111,23 @@ function menuOp2(marcador){
         sus gb son: ${ gb + "GB"}`);
         atras();
     }else if((marcador == 2)){
-        let packSelect = prompt(`
+        packSelect = prompt(`
         selecciona tu pack
         (1)$200 medium
         (2)$500 hard
         (3)$1000 extraHard
         (0) volver`);
         if(packSelect == 1){
-            saldo = saldo + pack1;
-            alert("has comprado el de $200");
+            saldo += objPack1.pack1;
+            alert(`$ ${objPack1.pack1} has comprado ${objPack1.nombre}`)
             atras();
         }else if(packSelect == 2){
-            saldo = saldo + pack2;
-            alert("has comprado el de $500");
+            saldo += objPack2.pack1;
+            alert(`$ ${objPack2.pack1} has comprado ${objPack2.nombre}`)
             atras();
         }else if(packSelect == 3){
-            saldo = saldo + pack3;
-            alert("has comprado el de $1000");
+            saldo += objPack3.pack1;
+            alert(`$ ${objPack3.pack1} has comprado ${objPack3.nombre}`)
             atras();
         }else if(packSelect = 0){
             alert(`has vuelto al menu`);
